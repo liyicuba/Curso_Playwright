@@ -32,9 +32,9 @@ test('purchase an item', async ({ page }) => {
     //const actualName = await randomItem.locator('#cart_contents_container .inventory_item_name').innerText()
     //const actualPrice = await randomItem.locator('#cart_contents_container .inventory_item_price').innerText()*/
 
-    const actualdDescription = await randomItem.locator('.inventory_item_desc').innerText()
-    const actualName = await randomItem.locator('.inventory_item_name').innerText()
-    const actualPrice = await randomItem.locator('.inventory_item_price').innerText()
+    const actualdDescription = await page.locator('.inventory_item_desc').innerText()
+    const actualName = await page.locator('.inventory_item_name').innerText()
+    const actualPrice = await page.locator('.inventory_item_price').innerText()
 
     expect(actualName).toEqual(expectedName)
     expect(actualdDescription).toEqual(expectedDescription)
